@@ -8,7 +8,7 @@ export const createUser = (req, res) => {
   res.send(`User with the name ${user.firstName} added to the database`);
 }
 
-export const getUserWithId = (req, res) => {
+export const getUser = (req, res) => {
   const { id } = req.params;
   foundUser = users.find((user) => user.id === id);
   res.send(foundUser);
@@ -32,6 +32,6 @@ export const updateUser = (req, res) => {
   res.send(`User with the id ${id} has been updated successfully`);
 }
 
-export const getUser = (req, res) => {
+export const getUsers = (req, res) => {
   res.send(users);
 }

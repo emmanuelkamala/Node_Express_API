@@ -1,8 +1,8 @@
 # Project: Building an API
 
-In this project, I will be building an API using NodeJS and Express.
+In this project, I will be building an API using NodeJS and Express. It's just a simple API with data of names of different people with their ages.
 
-![screenshot](./src/images/homepage.png)<br />
+![screenshot](./images/homepage.png)<br />
 
 ## Built With
 
