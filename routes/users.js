@@ -3,7 +3,7 @@ import { v4 as uuidv4} from 'uuid';
 
 const router = express.Router();
 
-const users = [];
+let users = [];
 
 router.get('/', (req, res) => {
   console.log(users);
@@ -25,5 +25,15 @@ router.get('/:id', (req, res) => {
 
   res.send(foundUser);
 })
+
+router.delete('/:id', (req, res) => {
+  const { id } = req.params;
+
+  users = users.filter((user) => user.id !== id);
+
+  res.send(`User with the id ${id} has been deleted successfully`);
+
+})
+
 
 export default router;
