@@ -26,6 +26,7 @@ router.get('/:id', (req, res) => {
   res.send(foundUser);
 })
 
+
 router.delete('/:id', (req, res) => {
   const { id } = req.params;
 
@@ -33,6 +34,20 @@ router.delete('/:id', (req, res) => {
 
   res.send(`User with the id ${id} has been deleted successfully`);
 
+})
+
+
+router.patch('/:id', (req, res) => {
+  const { id } = req.params;
+  const { firstName, lastName, age } = req.body;
+
+  const user = users.find((user) => user.id === id);
+
+  if (user) user.firstName = firstName;
+  if (user) user.lastName = lastName;
+  if (user) user.age = age;
+
+  res.send(`User with the id ${id} has been updated successfully`);
 })
 
 
