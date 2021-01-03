@@ -36,7 +36,7 @@ http://localhost:3000/
 
 
 After if you want to do any changes please create new branch, after changes open pull request.
-Happy coding!
+Happy coding.
 
 
 ## Author
